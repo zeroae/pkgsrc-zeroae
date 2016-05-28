@@ -4,3 +4,4 @@ SHA1 (postgres-xl-9.5r1.1.tar.gz) = 74b6e69ee092ae4717ab15f5446d5ba492c1f993
 RMD160 (postgres-xl-9.5r1.1.tar.gz) = b026e493b606d47c91973d2addf591c4a2849dd2
 SHA512 (postgres-xl-9.5r1.1.tar.gz) = 9139824ed8e707a0da72e8b606634495963aadf95786c1157efd379adf084f83d156a4cd03a0e91cee6beefe2f1f2b7281346c5aeff7aa4108eedd754b398847
 Size (postgres-xl-9.5r1.1.tar.gz) = 24943577 bytes
+SHA1 (patch-gtm-Makefile) = 4d4ddc4e0df78efecf0f8c5f17abbbe71925dfbc

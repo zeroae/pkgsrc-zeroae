@@ -1,11 +1,11 @@
 # $NetBSD$
 
-PKGNAME=	${DISTNAME:C/-xl-/xl-95-/}
+PKGNAME=	${DISTNAME:C/-xl-/xl95-/}
 COMMENT=	An all-purpose fully ACID open source scale-out SQL database solution.
 
-DEPENDS+=	postgresxl95-client>=${PKGVERSION_NOREV}:../postgresxl95-client
-#DEPENDS+=	postgresql94-docs>=${PKGVERSION_NOREV}:../../databases/postgresql94-docs
-#DEPENDS+=	postgresql94-server>=${PKGVERSION_NOREV}:../../databases/postgresql94-server
+DEPENDS+=	postgresxl95-client>=${PKGVERSION_NOREV}:../../zeroae/postgresxl95-client
+DEPENDS+=	postgresxl95-docs>=${PKGVERSION_NOREV}:../../zeroae/postgresxl95-docs
+DEPENDS+=	postgresxl95-server>=${PKGVERSION_NOREV}:../../zeroae/postgresxl95-server
 
 META_PACKAGE=	yes
 

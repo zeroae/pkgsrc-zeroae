@@ -1,0 +1,21 @@
+@comment $NetBSD$
+include/postgresql/server/plpy_util.h
+include/postgresql/server/plpython.h
+share/locale/cs/LC_MESSAGES/plpython-9.5.mo
+share/locale/de/LC_MESSAGES/plpython-9.5.mo
+share/locale/es/LC_MESSAGES/plpython-9.5.mo
+share/locale/fr/LC_MESSAGES/plpython-9.5.mo
+share/locale/it/LC_MESSAGES/plpython-9.5.mo
+share/locale/ja/LC_MESSAGES/plpython-9.5.mo
+share/locale/ko/LC_MESSAGES/plpython-9.5.mo
+share/locale/pl/LC_MESSAGES/plpython-9.5.mo
+share/locale/pt_BR/LC_MESSAGES/plpython-9.5.mo
+share/locale/ru/LC_MESSAGES/plpython-9.5.mo
+share/locale/zh_CN/LC_MESSAGES/plpython-9.5.mo
+lib/postgresql/plpython2.so
+share/postgresql/extension/plpython2u--1.0.sql
+share/postgresql/extension/plpython2u--unpackaged--1.0.sql
+share/postgresql/extension/plpython2u.control
+share/postgresql/extension/plpythonu--1.0.sql
+share/postgresql/extension/plpythonu--unpackaged--1.0.sql
+share/postgresql/extension/plpythonu.control

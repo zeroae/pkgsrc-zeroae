@@ -20,9 +20,9 @@ CONFLICTS+=	postgresxl[0-8][0-9]-${module}-[0-9]*
 CONFLICTS+=	postgresxl9[01235-9]-${module}-[0-9]*
 .endif
 
-DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresxl95/distinfo
-COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresxl95/files
-PATCHDIR?=		${.CURDIR}/../../databases/postgresxl95/patches
+DISTINFO_FILE?=		${.CURDIR}/../postgresxl95/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../postgresxl95/files
+PATCHDIR?=		${.CURDIR}/../postgresxl95/patches
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake bison libtool msgfmt perl
@@ -118,4 +118,4 @@ post-extract:
 		${WRKSRC}/src/makefiles/Makefile.dragonfly
 .endif
 
-.include "../../databases/postgresxl95/options.mk"
+.include "../postgresxl95/options.mk"

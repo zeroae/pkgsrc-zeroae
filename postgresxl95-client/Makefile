@@ -3,7 +3,7 @@
 PKGNAME=	${DISTNAME:C/-xl-/xl95-client-/}
 COMMENT=	Postgres-XL database client programs
 
-.include "../../databases/postgresxl95/Makefile.common"
+.include "../../zeroae/postgresxl95/Makefile.common"
 
 USE_TOOLS+=		gzip tar
 CONFIGURE_ARGS+=	--with-openssl
@@ -34,16 +34,22 @@ CONFIGURE_ARGS+=	--enable-thread-safety
 CONFIGURE_ARGS+=	--disable-thread-safety
 .endif
 
-#INSTALL_DIRS=	src/include
-#INSTALL_DIRS+=	src/common
-#INSTALL_DIRS+=	src/interfaces
-#INSTALL_DIRS+=	src/bin
-#INSTALL_DIRS+=	src/port
-#BUILD_DIRS=	${INSTALL_DIRS}
-# Without this, the Darwin build fails (related to -bundle_loader).
-#BUILD_DIRS+=	src/gtm
-#BUILD_DIRS+=	src/backend
-#BUILD_DIRS+=	src
+INSTALL_DIRS=	src/common
+INSTALL_DIRS+=	src/port
+INSTALL_DIRS+=	src/interfaces
+INSTALL_DIRS+=	src/include
+INSTALL_DIRS+=	src/bin/pg_basebackup
+INSTALL_DIRS+=	src/bin/pg_config
+INSTALL_DIRS+=	src/bin/pg_dump
+INSTALL_DIRS+=	src/bin/pgbench
+INSTALL_DIRS+=	src/bin/pgevent
+INSTALL_DIRS+=	src/bin/psql
+INSTALL_DIRS+=	src/bin/scripts
+INSTALL_DIRS+=	src/makefiles
+INSTALL_DIRS+=	src/test/regress
+BUILD_DIRS=	${INSTALL_DIRS}
+BUILD_DIRS+=	src/gtm
+BUILD_DIRS+=	src/backend
 
 .for f in pg_service.conf psqlrc
 CONF_FILES+=	share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}

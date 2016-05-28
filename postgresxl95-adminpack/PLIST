@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/postgresql/adminpack.so
+share/postgresql/extension/adminpack--1.0.sql
+share/postgresql/extension/adminpack.control

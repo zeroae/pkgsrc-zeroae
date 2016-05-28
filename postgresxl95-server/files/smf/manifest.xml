@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <dependency name='network' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/milestone/network:default' />
+    </dependency>
+    <dependency name='filesystem-local' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local:default' />
+    </dependency>
+    <method_context project='default'>
+      <method_credential user='@PGUSER@' group='@PGGROUP@' />
+      <method_environment>
+        <envvar name="LD_PRELOAD_32" value="/usr/lib/extendedFILE.so.1" />
+        <envvar name='PATH' value='@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin:/bin:/sbin'/>
+      </method_environment>
+    </method_context>
+
+    <instance name="gtm" enabled="false">
+      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ start' timeout_seconds='300' />
+      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ stop' timeout_seconds='300' />
+      <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ refresh' timeout_seconds='60' />
+      <property_group name='config' type='application'>
+        <propval name='type' type='astring' value='gtm' />
+        <propval name='data' type='astring' value='@PGHOME@/gtm/data' />
+        <propval name='log' type='astring' value='@VARBASE@/log/pgsql/gtm.log' />
+      </property_group>
+    </instance>
+
+    <instance name="gtm_proxy" enabled="false">
+      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ start' timeout_seconds='300' />
+      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ stop' timeout_seconds='300' />
+      <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ refresh' timeout_seconds='60' />
+      <property_group name='config' type='application'>
+        <propval name='type' type='astring' value='gtm_proxy' />
+        <propval name='data' type='astring' value='@PGHOME@/gtm_proxy/data' />
+        <propval name='log' type='astring' value='@VARBASE@/log/pgsql/gtm_proxy.log' />
+      </property_group>
+    </instance>
+
+    <instance name="coordinator" enabled="false">
+      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ start' timeout_seconds='300' />
+      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ stop' timeout_seconds='300' />
+      <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
+      <property_group name='config' type='application'>
+        <propval name='type' type='astring' value='coordinator' />
+        <propval name='data' type='astring' value='@PGHOME@/coordinator/data' />
+        <propval name='log' type='astring' value='@VARBASE@/log/pgsql/coordinator.log' />
+      </property_group>
+    </instance>
+
+    <instance name="datanode" enabled="false">
+      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ start' timeout_seconds='300' />
+      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ stop' timeout_seconds='300' />
+      <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
+      <property_group name='config' type='application'>
+        <propval name='type' type='astring' value='datanode' />
+        <propval name='data' type='astring' value='@PGHOME@/datanode/data' />
+        <propval name='log' type='astring' value='@VARBASE@/log/pgsql/datanode.log' />
+      </property_group>
+    </instance>
+
+    <stability value='Evolving' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>Postgres-XL</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='postgres' section='1M' />
+        <doc_link name='postgres-xl.org' uri='http://postgres-xl.org' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
