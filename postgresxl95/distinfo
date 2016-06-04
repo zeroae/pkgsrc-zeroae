@@ -5,3 +5,7 @@ RMD160 (postgres-xl-9.5r1.1.tar.gz) = b026e493b606d47c91973d2addf591c4a2849dd2
 SHA512 (postgres-xl-9.5r1.1.tar.gz) = 9139824ed8e707a0da72e8b606634495963aadf95786c1157efd379adf084f83d156a4cd03a0e91cee6beefe2f1f2b7281346c5aeff7aa4108eedd754b398847
 Size (postgres-xl-9.5r1.1.tar.gz) = 24943577 bytes
 SHA1 (patch-gtm-Makefile) = 4d4ddc4e0df78efecf0f8c5f17abbbe71925dfbc
+SHA1 (patch-src_timezone_localtime.c) = 622f57bc1d10f07ab73f86765cbf587eece57085
+SHA1 (patch-src_timezone_private.h) = 85dac95e40efc16270885087f868aeb76e1b9214
+SHA1 (patch-src_timezone_strftime.c) = 25102dce1b9b22385353af23500636fb18e3bf64
+SHA1 (patch-src_timezone_zic.c) = ed04d781845239ce5dc7c6fca406ce62c10a9605
