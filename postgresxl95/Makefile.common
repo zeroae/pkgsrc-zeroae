@@ -139,4 +139,4 @@ post-extract:
 		${WRKSRC}/src/makefiles/Makefile.dragonfly
 .endif
 
-.include "../postgresxl95/options.mk"
+.include "../../zeroae/postgresxl95/options.mk"
