@@ -79,7 +79,6 @@ CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-ossp-uuid
-CONFIGURE_ARGS+=	--with-system-tzdata=/usr/share/lib/zoneinfo
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
