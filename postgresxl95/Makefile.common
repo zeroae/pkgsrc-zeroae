@@ -56,7 +56,6 @@ PKG_SYSCONFSUBDIR=	postgresql
 .include "../../lang/gcc49/buildlink3.mk"
 .include "../../lang/gcc49-libs/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
-.include "../../devel/ossp-uuid/buildlink3.mk"
 
 PG_TEMPLATE.SunOS=	solaris
 PG_TEMPLATE.IRIX=	irix5
@@ -78,7 +77,6 @@ CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
 CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
 
 CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--with-ossp-uuid
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python

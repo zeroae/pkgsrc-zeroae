@@ -11,7 +11,7 @@ PLIST_VARS+=		uuid
 
 .if ${OPSYS} != "Darwin"
 PLIST.uuid=		yes
-CONFIGURE_ARGS+=	--with-ossp-uuid
+CONFIGURE_ARGS+=	--with-uuid=ossp
 BUILD_DIRS+=		contrib/uuid-ossp
 .include "../../devel/ossp-uuid/buildlink3.mk"
 
