@@ -8,21 +8,21 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresxl-<lang>	server-side module for Postgres-XL backend
 #
-# used by databases/postgrexql95-adminpack/Makefile
-# used by databases/postgrexql95-client/Makefile
-# used by databases/postgrexql95-datatypes/Makefile
-# used by databases/postgrexql95-dblink/Makefile
-# used by databases/postgrexql95-docs/Makefile
-# used by databases/postgrexql95-fuzzystrmatch/Makefile
-# used by databases/postgrexql95-monitoring/Makefile
-# used by databases/postgrexql95-pgcrypto/Makefile
-# used by databases/postgrexql95-pgxc/Makefile
-# used by databases/postgrexql95-plperl/Makefile
-# used by databases/postgrexql95-plpython/Makefile
-# used by databases/postgrexql95-pltcl/Makefile
-# used by databases/postgrexql95-replicationtools/Makefile
-# used by databases/postgrexql95-server/Makefile
-# used by databases/postgrexql95-upgrade/Makefile
+# used by databases/postgresxl95-adminpack/Makefile
+# used by databases/postgresxl95-client/Makefile
+# used by databases/postgresxl95-datatypes/Makefile
+# used by databases/postgresxl95-dblink/Makefile
+# used by databases/postgresxl95-docs/Makefile
+# used by databases/postgresxl95-fuzzystrmatch/Makefile
+# used by databases/postgresxl95-monitoring/Makefile
+# used by databases/postgresxl95-pgcrypto/Makefile
+# used by databases/postgresxl95-pgxc/Makefile
+# used by databases/postgresxl95-plperl/Makefile
+# used by databases/postgresxl95-plpython/Makefile
+# used by databases/postgresxl95-pltcl/Makefile
+# used by databases/postgresxl95-replicationtools/Makefile
+# used by databases/postgresxl95-server/Makefile
+# used by databases/postgresxl95-upgrade/Makefile
 
 DISTNAME=	postgres-xl-9.5r1.1
 CATEGORIES=	databases
