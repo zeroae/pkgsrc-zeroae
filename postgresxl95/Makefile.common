@@ -35,12 +35,12 @@ LICENSE=	postgresql-license
 
 CONFLICTS+=	postgres[xq]l-[0-9]*
 CONFLICTS+=	postgres[xq]l[0-8][0-9]-[0-9]*
-CONFLICTS+=	postgres[xq]l9[01235-9]-[0-9]*
+CONFLICTS+=	postgres[xq]l9[012346-9]-[0-9]*
 
 .if !empty(PKGNAME:M*-*-*)
 module=		${PKGNAME:C/-[0-9].*$//:C/^.*-//}
 CONFLICTS+=	postgres[xq]l[0-8][0-9]-${module}-[0-9]*
-CONFLICTS+=	postgres[xq]l9[01235-9]-${module}-[0-9]*
+CONFLICTS+=	postgres[xq]l9[012346-9]-${module}-[0-9]*
 .endif
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresxl95/distinfo
