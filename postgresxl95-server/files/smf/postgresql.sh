@@ -14,6 +14,7 @@ getproparg()
 }
 
 PGBIN=@PREFIX@/bin
+PGTYPE=`getproparg config/type`
 PGDATA=`getproparg config/data`
 PGLOG=`getproparg config/log`
 
@@ -37,15 +38,15 @@ fi
 case "$1" in
 'start')
      ulimit -n 10240
-     $PGBIN/pg_ctl -D $PGDATA -l $PGLOG start
+     $PGBIN/pg_ctl -Z $PGTYPE -D $PGDATA -l $PGLOG start
      ;;
 
 'stop')
-     $PGBIN/pg_ctl -D $PGDATA stop
+     $PGBIN/pg_ctl -Z $PGTYPE -D $PGDATA stop
      ;;
 
 'refresh')
-     $PGBIN/pg_ctl -D $PGDATA reload
+     $PGBIN/pg_ctl -Z $PGTYPE -D $PGDATA reload
      ;;
 *)
 
