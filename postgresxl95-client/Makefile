@@ -46,9 +46,9 @@ INSTALL_DIRS+=	src/bin/pgevent
 INSTALL_DIRS+=	src/bin/psql
 INSTALL_DIRS+=	src/bin/scripts
 INSTALL_DIRS+=	src/makefiles
-INSTALL_DIRS+=	src/test/regress
 BUILD_DIRS=	${INSTALL_DIRS}
 BUILD_DIRS+=	src/gtm
+# Without this, the Darwin build fails (related to -bundle_loader).
 BUILD_DIRS+=	src/backend
 
 .for f in pg_service.conf psqlrc
