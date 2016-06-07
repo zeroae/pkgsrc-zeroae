@@ -22,7 +22,7 @@
       <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ refresh' timeout_seconds='60' />
       <property_group name='config' type='application'>
         <propval name='type' type='astring' value='gtm' />
-        <propval name='data' type='astring' value='@PGHOME@/gtm/data' />
+        <propval name='data' type='astring' value='@PGHOMEDATA@/gtm' />
         <propval name='log' type='astring' value='@VARBASE@/log/pgsql/gtm.log' />
       </property_group>
     </instance>
@@ -33,7 +33,7 @@
       <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.gtm@ refresh' timeout_seconds='60' />
       <property_group name='config' type='application'>
         <propval name='type' type='astring' value='gtm_proxy' />
-        <propval name='data' type='astring' value='@PGHOME@/gtm_proxy/data' />
+        <propval name='data' type='astring' value='@PGHOMEDATA@/gtm_proxy' />
         <propval name='log' type='astring' value='@VARBASE@/log/pgsql/gtm_proxy.log' />
       </property_group>
     </instance>
@@ -44,7 +44,7 @@
       <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
       <property_group name='config' type='application'>
         <propval name='type' type='astring' value='coordinator' />
-        <propval name='data' type='astring' value='@PGHOME@/coordinator/data' />
+        <propval name='data' type='astring' value='@PGHOMEDATA@/coordinator' />
         <propval name='log' type='astring' value='@VARBASE@/log/pgsql/coordinator.log' />
       </property_group>
     </instance>
@@ -55,7 +55,7 @@
       <exec_method type='method' name='refresh' exec='@PREFIX@/@SMF_METHOD_FILE.postgresql@ refresh' timeout_seconds='60' />
       <property_group name='config' type='application'>
         <propval name='type' type='astring' value='datanode' />
-        <propval name='data' type='astring' value='@PGHOME@/datanode/data' />
+        <propval name='data' type='astring' value='@PGHOMEDATA@/datanode' />
         <propval name='log' type='astring' value='@VARBASE@/log/pgsql/datanode.log' />
       </property_group>
     </instance>
