@@ -38,7 +38,7 @@ fi
 case "$1" in
 'start')
      ulimit -n 10240
-     $PGBIN/pg_ctl -Z $PGTYPE -D $PGDATA -l $PGLOG start
+     $PGBIN/pg_ctl -Z $PGTYPE -D $PGDATA start
      ;;
 
 'stop')
