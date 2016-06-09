@@ -12,9 +12,9 @@ $NetBSD$
 +			{
 +				elog(ERROR, "ERROR: cannot connect to the coordinator master %s.\n", host);
 +				continue;
-+			}                                                                                                                                                                
-+			fprintf(f, "UPDATE pgxc_node SET nodeis_preferred=(node_host = '%s') WHERE node_type = 'D';\n", host)
-+				fprintf(f, "SELECT pgxc_pool_reload();\n");
++			}
++			fprintf(f, "UPDATE pgxc_node SET nodeis_preferred=(node_host = '%s') WHERE node_type = 'D';\n", host);
++			fprintf(f, "SELECT pgxc_pool_reload();\n");
 +			fprintf(f, "\\q\n");
 +			pclose(f);
 +		}
