@@ -8,7 +8,7 @@ $NetBSD$
  		}
 +		else if (strcmp(aval(VAR_coordNames)[ii], name) == 0)
 +		{
-+			if ((f = pgxc_popen_wRaw("psql -h %s -p %d %s", host, atoi(port), sval(VAR_defaultDatabase))) == NULL)
++			if ((f = pgxc_popen_wRaw("psql -h %s -p %d %s", host, port, sval(VAR_defaultDatabase))) == NULL)
 +			{
 +				elog(ERROR, "ERROR: cannot connect to the coordinator master %s.\n", host);
 +				continue;
